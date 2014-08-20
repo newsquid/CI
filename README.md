@@ -29,15 +29,15 @@ Will compile the ci.native executable file and run it.
 |Method | URL                            |Input                      |Output                       | Description                  |  
 |-------|--------------------------------|---------------------------|-----------------------------|------------------------------|
 |GET    | /projects                      | params: search, page      | \[project,project..\]       | Gets all projects no scripts |
-|GET    | /project/:name                 |                           | project                     | Get project with name        | 
-|POST   | /project/:name/build           | optional params: key      | build                       | Build the project            |
+|GET    | /projects/:name                 |                           | project                     | Get project with name        | 
+|POST   | /projects/:name/build           | optional params: key      | build                       | Build the project            |
 
 ##Build
 |Method | URL                            |Input                      |Output                       | Description                  |  
 |-------|--------------------------------|---------------------------|-----------------------------|------------------------------|
 |GET    | /builds                        | params: page              | \[build,build..\]           | Get current running builds   |
-|GET    | /build/:id                     |                           | build                       | Get info on the build        |
-|GET    | /build/:id/log                 |                           | buildlog                    | Get the build log            |
+|GET    | /builds/:id                     |                           | build                       | Get info on the build        |
+|GET    | /builds/:id/log                 |                           | buildlog                    | Get the build log            |
 
 ##Types
 
