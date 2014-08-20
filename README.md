@@ -39,6 +39,39 @@ Will compile the ci.native executable file and run it.
 |GET    | /build/:id                     |                           | build                       | Get info on the build        |
 |GET    | /build/:id/log                 |                           | buildlog                    | Get the build log            |
 
+##Types
+
+##project:
+```json
+{
+    "name"          : "A unique name",
+    "description"   : "A description of the project",
+    "git"           : "github.com/user/repo",
+    "gitbranch"     : "master",
+    "buildscript"   : "build script",
+    "buildkey"      : "key to build project"
+}
+```
+
+##build
+```json
+{
+    "id"        : 1,
+    "project"   : "project for the build",
+    "complete"  : true
+}
+```
+
+##build log
+First and last entry is used to get partial build logs on the next request.
+```json
+{
+    "id"            : 1,
+    "buildid"       : 1,
+    "log"           : "log output"
+}
+```
+
 ##Authentication
 Using HTTP basic authentication
 
